@@ -2,14 +2,25 @@ package com.hspedu.encap;
 
 public class Ecapsulation01 {
     public static void main(String[] args) {
-        Person person =new Person();
-        person.setAge(31);
-        person.setName("xiaom");
-        person.setSalary(30000);
-        System.out.println(person.info());
+//        Person person =new Person();
+//        person.setAge(31);
+//        person.setName("xiaom");
+//        person.setSalary(30000);
+//        System.out.println(person.info());
+
+        Person smith =new Person("NAEM",1900,200);
+        System.out.println(smith.info());
     }
 }
 class Person {
+    public Person(String name,int age,double salary){
+//        this.name =name;
+//        this.age=age;
+//        this.salary=salary;
+        setSalary(salary);
+        setName(name);
+        setAge(age);
+    }
     public String name;
     private int age;
     private double salary;
