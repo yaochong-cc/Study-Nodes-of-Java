@@ -1,9 +1,41 @@
-package tankgame;
+package tankgame02;
 
 public class Tank {
     private int x;
     private int y;
-    //alt+insert
+    private int direct;//坦克方向
+    private int speed=1;
+
+    public int getSpeed() {
+        return speed;
+    }
+
+    public void setSpeed(int speed) {
+        this.speed = speed;
+    }
+
+    //坦克移动
+    public void moveUp(){
+        y-=speed;
+    }
+    public void moveRight(){
+        x+=speed;
+    }
+    public void moveDown(){
+        y+=speed;
+    }
+    public void moveLeft(){
+        x-=speed;
+    }
+    public int getDirect(){
+        return direct;
+    }
+
+    public void setDirect(int direct) {
+        this.direct = direct;
+    }
+//alt+insert
+
     public Tank(int x,int y){
         this.x=x;
         this.y=y;
